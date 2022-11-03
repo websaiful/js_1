@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is my second project</h1>
+    <h3>Employee sellary =<span id="employee-sallary"></span>/-</h3>
+    <h3><span id="how-much-Bonus"></span>%Get bonus =<span id="p"></span>/-</h3>
+    <h3>Total balance = <span id="total-balance"></span>/-</h3>
+    
+    <script>
+        let sellary = +prompt('Enter Your sellary');
+        let bonus =  +prompt('Enter Your Bonus');
+        let onePer = sellary/100;
+        let totalBonus = onePer*bonus;
+        let totalSellary = sellary+totalBonus;
+        document.getElementById("total-balance").innerHTML = totalSellary;
+        document.getElementById("employee-sallary").innerHTML =sellary  ;
+        document.getElementById("p").innerHTML =  totalBonus;
+        document.getElementById("how-much-Bonus").innerHTML = bonus;
+
+        
+
+    </script>
+</body>
+</html>

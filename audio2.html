@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="button">atif Aslam</button>
+    <button class="button">arjit singh</button>
+    <button class="button">darsan revel</button>
+    <script>
+       for(var i=0; i<3; i++){
+        document.querySelectorAll(".button")[i].addEventListener("click",function(){
+            var text = this.innerHTML
+            audioPlay(text);
+            
+
+        })
+       }
+       function audioPlay(text){
+        
+        switch(text){
+                case"atif Aslam":
+                var audio = new Audio("atif.mp3");
+                audio.play();
+                break;
+                case"arjit singh":
+                var audio = new Audio("arjit.mp3");
+                audio.play();
+                break;
+                case"darsan revel":
+                var audio = new Audio("darsan.mp3");
+                audio.play();
+                break;
+            }
+       }
+    </script>
+</body>
+</html>

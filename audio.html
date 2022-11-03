@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .button{
+            width: 180px;
+            height: 80px;
+            background-color:red;
+            margin-left: 150px;
+            margin-top: 50px;
+            border: none;
+            border-radius: 10px;
+        }
+        div{
+            width: 500px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+   <section>
+    <div>
+        <button class="button">Atif Aslam</button>
+        <button  class="button">Arijit Singh</button>
+        <button  class="button">Darsan Revel</button>
+       </div>
+   </section>
+   <script>
+for(var i=0; i<3; i++){
+    document.querySelectorAll(".button")[i].addEventListener("click",function(){
+         var text = this.innerHTML;
+         audioPlay(text);
+
+     
+   });
+}
+  function audioPlay(text){
+    switch(text){
+        case 'Atif Aslam':
+            var audio = new Audio("atif.mp3");
+            audio.play();
+            
+            break;
+        case 'Arijit Singh':
+            var audio = new Audio("arjit.mp3");
+            audio.play();
+            break;
+        case 'Darsan Revel':
+            var audio = new Audio("darsan.mp3");
+            audio.play();
+            break;
+     }
+
+  }
+    
+   </script>
+</body>
+</html>

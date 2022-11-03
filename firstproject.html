@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>this is my first projecrt</h2>
+    <h3>product price =<span id="product-price"></span> /-</h3>
+    <h3><span id="how-much-discount"></span>%discount =<span id="total-discount"></span> /-</h3>
+    <h3>total price =<span id="presentPrice"></span> /-</h3>
+    
+    <script>
+        let productPrice = +prompt('Enter your product Price');
+        let discount = +prompt('Enter your discount');
+        let onePer = productPrice/100;
+        let total = onePer*discount;
+        let presentPrice =productPrice-total;
+        
+        document.getElementById("presentPrice").innerHTML =  presentPrice;
+        document.getElementById("product-price").innerHTML = productPrice;
+        document.getElementById("how-much-discount").innerHTML = discount;
+        document.getElementById("total-discount").innerHTML = total;
+      
+     
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student result sheet</h1>
+    <h3>bangla=<span id="bangla"></span></h3>
+    <h3>math=<span id="math"></span></h3>
+    <h3>english=<span id="english"></span></h3>
+    <h3>science=<span id="science"></span></h3>
+    <h3>socile=<span id="socile"></span></h3>
+    <h3>islam=<span id="islam"></span></h3>
+    <h3>Total Marks =<span id="demo"></span></h3>
+    <h3>Result=<span id="result"></span></h3>
+   
+    <script>
+        let bangla = +prompt('enter bangla marks');
+        let math = +prompt('enter math marks');
+        let english = +prompt('enter english marks');
+        let science = +prompt('enter science marks');
+        let socile = +prompt('enter socile marks');
+        let islam = +prompt('enter islam marks');
+        let Total = bangla+math+english+science+socile+islam;
+        if(Total>500 && Total<600){
+            document.getElementById('result').innerHTML = "A+";
+        }else if(Total>400 && Total<500){
+            document.getElementById('result').innerHTML = "A";
+        }else if(Total>300 && Total<400){
+            document.getElementById('result').innerHTML = "A-";
+        }else if(Total>200 && Total<300){
+            document.getElementById('result').innerHTML = "B";
+        }else if (Total>100 && Total<200){
+            document.getElementById('result').innerHTML = "Fail";
+        }
+           
+        
+        document.getElementById('bangla').innerHTML = bangla;
+        document.getElementById('math').innerHTML = math;
+        document.getElementById('english').innerHTML = english;
+        document.getElementById('science').innerHTML = science;
+        document.getElementById('socile').innerHTML = socile;
+        document.getElementById('islam').innerHTML = islam;
+        document.getElementById('demo').innerHTML = Total;
+
+
+    </script>
+</body>
+</html>

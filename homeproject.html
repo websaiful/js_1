@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            
+           
+            background-image: linear-gradient(rgba(0, 0, 0, 0.801),rgba(0, 0, 0, 0.801)),url('photo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        
+        
+        .title{
+            text-align: center;
+            padding-top: 150px;
+            text-transform: capitalize;
+        }
+        .title h1{
+            color: red;
+            font-weight: 70px;
+        }
+        .title p{
+            color: white;
+            font-size: 20px;
+        }
+        .parent-div{
+            display: flex;
+            justify-content: center;
+        }
+        .timer{
+            border: 1px solid white;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h1>coming soon.....</h1>
+        <p>Abdullah computer & Training center</p>
+    </div>
+  <div class="parent-div">
+    <div class="timer">
+        <h2 id="day">01</h2>
+        <h2>day</h2>
+    </div>
+    <div class="timer">
+        <h2 id="hour">01</h2>
+        <h2>hour</h2>
+    </div>
+    <div class="timer">
+        <h2 id="minute">01</h2>
+        <h2>minute</h2>
+    </div>
+    <div class="timer">
+        <h2 id="second">01</h2>
+        <h2>second</h2>
+    </div>
+  </div>
+  <script>
+    function countDown(){
+        const eidday = new Date('2022-08-20');
+        const currentday = new Date();
+        const totaltime = (eidday-currentday)/1000;//1000 milioneer second = 1seconnd
+        const days = Math.floor(totaltime/3600/24);//akhane 3600s= 1hour;
+        const Hour = Math.floor(totaltime/3600) % 24;
+        const Minute = Math.floor(totaltime/60) % 60;
+        const Second = Math.floor(totaltime) % 60;
+
+
+        document.getElementById('day').innerHTML = days;
+    document.getElementById('hour').innerHTML = Hour ;
+    document.getElementById('minute').innerHTML = Minute ;
+    document.getElementById('second').innerHTML =  Second ;
+    }
+   
+    setInterval(countDown,1000)
+    
+
+  </script>
+</body>
+</html>
